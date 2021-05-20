@@ -28,7 +28,7 @@ var liste=document.getElementById('exemple2');
         </div>
       </div>
       <div class="col-12 col-sm-6">
-        <h3 class="my-3">LOWA Men’s Renegade GTX Mid Hiking Boots Review</h3>
+        <h3 class="my-3">${book.namebook}</h3>
         <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terr.</p>
 
         <hr>
@@ -44,10 +44,10 @@ var liste=document.getElementById('exemple2');
 
         <div class="bg-gray py-2 px-3 mt-4">
           <h2 class="mb-0">
-            $80.00
+          ${book.prix}
           </h2>
           <h4 class="mt-0">
-            <small>Ex Tax: $80.00 </small>
+            <small>${book.prix}</small>
           </h4>
         </div>
 
