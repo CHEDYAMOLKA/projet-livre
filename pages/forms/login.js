@@ -1,8 +1,9 @@
-users = JSON.parse(localStorage.getItem("Users"))||[];
-connectedUser= JSON.parse(localStorage.getItem('ConnectedUser'))
-//console.log(users);
-//console.log(connectedUser);
 
+var users=[
+
+  {email:"afliRayhan@gmail.com",password:"wxcvbn"}
+]
+localStorage.setItem("users",users)
 function login(){
   email= document.getElementById('email').value;
 
@@ -11,16 +12,14 @@ function login(){
    var user = users.find((Element=>Element.password==password && Element.email==email));
    if (user){
      console.log(user)
-    location.replace("../index.html");
+    location.replace("../../index.html");
     localStorage.setItem("ConnectedUser",JSON.stringify(user))
 
-  document.getElementById('email').value="";
-  document.getElementById('password').value="";
-
    }else{
-    // location.reload("./login.js");
+  alert("please password and email ineccorect")
    }
-
+   document.getElementById('email').value="";
+   document.getElementById('password').value="";
  }
 
 

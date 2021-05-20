@@ -1,29 +1,24 @@
-users = JSON.parse(localStorage.getItem("Books") )||[];
+books = JSON.parse(localStorage.getItem("Books") )||[];
 
   var query = window.location.search;
   var vars=query.split("=");
   var ID =vars[1];
- var books=users[ID];
- console.log(books);
-
-
-
- function  affiche(){
-  liste=document.getElementById('example2') ;
+ var book=books[ID];
+ console.log(book);
+ function  affiche(books){
 //let liste ='';
-books.forEach(element => {
+var liste=document.getElementById('example2');
+
   liste .innerHTML+=`
   <section>
-  <div>${element.namebook}</div>
-  <div>${element.date}</div>
-  <div>${element.prix}</div>
-  <div>${element.langue}</div>
+  <div>${book.namebook}</div>
+  <div>${book.date}</div>
+  <div>${book.prix}</div>
+  <div>${book.langue}</div>
 
   </section>
 
   `
-});
-
  }
-
+affiche()
 
